@@ -115,7 +115,7 @@ export default function page() {
               <CardDescription>Sedan</CardDescription>
             </CardHeader>
             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-              <Image src={"/car (2).png"} alt="" width={220} height={68} />
+              <Image src={"/suv.png"} alt="" width={220} height={68} />
               <Image src={"/Spesification.png"} alt="" width={256} height={24} />
             </CardContent>
             <CardFooter className="w-full flex items-center justify-between">
@@ -146,7 +146,7 @@ export default function page() {
               <CardDescription>SUV</CardDescription>
             </CardHeader>
             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-              <Image src={"/car (3).png"} alt="" width={220} height={68} />
+              <Image src={"/suv.png"} alt="" width={220} height={68} />
               <Image src={"/Spesification.png"} alt="" width={256} height={24} />
             </CardContent>
             <CardFooter className="w-full flex items-center justify-between">
@@ -166,7 +166,7 @@ export default function page() {
               <CardDescription>SUV</CardDescription>
             </CardHeader>
             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-              <Image src={"/car (4).png"} alt="" width={220} height={68} />
+              <Image src={"/suv.png"} alt="" width={220} height={68} />
               <Image src={"/Spesification.png"} alt="" width={256} height={24} />
             </CardContent>
             <CardFooter className="w-full flex items-center justify-between">
@@ -186,7 +186,7 @@ export default function page() {
               <CardDescription>SUV</CardDescription>
             </CardHeader>
             <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-              <Image src={"/car (4).png"} alt="" width={220} height={68} />
+              <Image src={"/suv (4).png"} alt="" width={220} height={68} />
               <Image src={"/Spesification.png"} alt="" width={256} height={24} />
             </CardContent>
             <CardFooter className="w-full flex items-center justify-between">
