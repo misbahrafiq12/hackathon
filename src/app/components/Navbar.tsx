@@ -1,25 +1,108 @@
-import React from 'react';
-import Image from 'next/image';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
+import React from "react";
+import Image from "next/image";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <div className='w-full bg-white h-auto flex flex-col md:flex-row items-center justify-between p-4 md:p-8 border-b-2 border-b-[#e7eef6]'>
-      <div className="first flex flex-col md:flex-row items-center gap-4 md:gap-16">
-        <h1 className='text-[#3563e9] text-4xl font-bold'>MORENT</h1>
-        <div className="input relative w-full md:w-auto">
-          <Image src={'/search-normal.png'} alt='' width={24} height={24} className='absolute top-1/2 left-3 transform -translate-y-1/2'/>
-          <input 
-            type="text" 
-            title="search" 
-            placeholder="Say something here" 
-            className='border-2 border-[#e7eef6] w-full md:w-[492px] h-[44px] rounded-full p-2 pl-10 pr-12'
+    <NavigationMenu className="w-full h-auto relative bg-white flex items-center justify-between max-w-[1440px] max-h-[124px] border border-white ;
+
+
+">
+      <NavigationMenuList className="flex items-center justify-between p-4 px-12 gap-28 w-full">
+        {/* Logo */}
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            id="logo"
+            className="text-lg font-bold text-black"
+          >
+            MORENT
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        {/* Search Section */}
+        <div
+          id="search"
+          className="relative w-[492px] h-[44px] flex items-center bg-white border border-[#C3D4E9] rounded-[70px]"
+        >
+          {/* Search Icon */}
+          <div className="absolute left-2">
+            <Image
+              src="/search-normal.svg"
+              alt="Search Icon"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
+          </div>
+
+          {/* Input Field */}
+          <input
+            type="text"
+            placeholder="Search something here"
+            className="w-full h-full pl-10 pr-10 text-sm font-medium bg-transparent focus:outline-none"
           />
-          <Image src={'/filter.png'} alt='' width={24} height={24} className='absolute top-1/2 right-3 transform -translate-y-1/2'/>
+
+          {/* Secondary Search Icon */}
+          <div className="absolute right-2">
+            <Image
+              src="/search.png"
+              alt="Search Icon"
+              width={20}
+              height={20}
+              className="w-5 h-5"
+            />
+          </div>
+        </div>
+      </NavigationMenuList>
+
+      {/* Profile div */}
+      <div className="flex items-center gap-5 ml-auto mr-12">
+        {/* Heart Icon */}
+        <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full">
+          <Image
+            src="/heart.svg"
+            alt="Heart Icon"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+        </div>
+
+        {/* Notification Icon */}
+        <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full">
+          <Image
+            src="/Notification.png"
+            alt="Notification Icon"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+        </div>
+
+        {/* Settings Icon */}
+        <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full">
+          <Image
+            src="/Settings.svg"
+            alt="Settings Icon"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+        </div>
+
+        {/* Profile Icon */}
+        <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full">
+          <Image
+            src="/proile.png"
+            alt="Profile Icon"
+            width={24}
+            height={24}
+            className="w-6 h-6 rounded-full"
+          />
         </div>
       </div>
-      <div className="icons mt-4 md:mt-0">
-        <Image src={'/Profil & Notification.png'} alt='' width={236} height={44} />
-      </div>
-    </div>
+    </NavigationMenu>
   );
-}
+};
+
+export default Navbar;
